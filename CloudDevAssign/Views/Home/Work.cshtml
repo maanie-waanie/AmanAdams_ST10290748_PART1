@@ -66,10 +66,48 @@
             <p style="font-family:courier;">R350</p>
         </div>
 
-        <div class="wquarter">
+        <div class="quarter">
             <img src="~/PhotosForCloudDev/leaf_mug.jpeg" alt="Leaf Mug" width="350" height="200">
             <h3 style="font-family:courier;">Garden Mugs</h3>
             <p style="font-family:courier;">R140</p>
         </div>
     </div>
+
+    <body>
+    <div>  
+        <form action="/Product/Home" method="post">
+            <h2 style="font-family:courier;">Place an Order</h2>
+            <label for="productName">Select Product:</label>
+            <select id="productName" name="productName">
+                <option value="-----">------</option>
+                <option value="Nesting Bowl Set">Nesting Bowl Set</option>
+                <option value="Blue Mug & Saucer Set">Blue Mug & Saucer Set</option>
+                <option value="Spotted Mugs">Spotted Mugs</option>
+                <option value="Trinket Dish">Trinket Dish</option>
+                <option value="Soap Dish">Soap Dish</option>
+                <option value="Casserole Dish">Casserole Dish</option>
+                <option value="Assymetrical Bowls">Assymetrical Bowls</option>
+                <option value="Garden Mugs">Garden Mugs</option>
+                <!-- Add more options for other products -->
+            </select>
+            <br><br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+            <br><br>
+            <button type="submit">Place Order</button>
+            
+        </form>
+    </div>
+
+
+   
+        <form action="/Product/Work" method="post">
+            <p>Insert new products</p>
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="text" name="Price" placeholder="Price" required>
+            <input type="text" name="Category" placeholder="Category" required>
+            <input type="text" name="Availability" placeholder="Availability" required>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
 </div>

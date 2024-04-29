@@ -1,19 +1,54 @@
-﻿@*
-    ViewData["Title"] = "About Us";
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model CloudDevAssign.Models.userTable
+
 @{
+    ViewData["Title"] = "About Us";
 }
+
 <div class="text-center">
     <h1 class="display-4" style="font-family:courier;">About Us</h1>
-    <div class="text-left">
-        <p style="font-family:courier;">
-            KhumaloCraft Emporium, founded in 2021, by visionary entrepreneur James Khumalo aims to globally showcase handcrafted
-            ceramics. James worked in the business industry for 15 years of his life, and lost his job due to Covid.
-            In quarantine he picked up pottery as a hobbie and fell inlove with it. In 2021 he decided to pursue his new hobbie as a profession and open up a Handmade Crafts Retail.
-        </p>
-        <div class="quarter">
-            <img src="~/PhotosForCloudDev/james.jpeg" alt="james" width="500" height="400">
+
+
+    <div class="text-center" style="display: flex; justify-content: center;">
+        <div style="flex: 1;">
+            
+            <p>
+                KhumaloCraft Emporium, founded in 2021, by visionary entrepreneur James Khumalo aims to globally showcase handcrafted
+                ceramics. James worked in the business industry for 15 years of his life, and lost his job due to Covid.
+                In quarantine he picked up pottery as a hobbie and fell inlove with it. In 2021 he decided to pursue his new hobbie as a profession and open up a Handmade Crafts Retail.
+            </p>
+        </div>
+        <div style="flex: 1; margin-left: 20px;">
+            <div class="card">
+                <img src="~/PhotosForCloudDev/james.jpeg" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b>James Khumalo</b></h4>
+                    <p>CEO & Founder</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+ </div>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                width: 100%;
+                max-width: 400px; /* Adjust the max-width as needed */
+            }
+
+                .card:hover {
+                    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                }
+
+            .container {
+                padding: 2px 16px;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+</html>
