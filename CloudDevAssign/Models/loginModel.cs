@@ -8,7 +8,7 @@ namespace CloudDevAssign.Models
         public static string con_string = "Server=tcp:aman-cldv-sql-server.database.windows.net,1433;Initial Catalog=aman-cldv-sql-databases;Persist Security Info=False;User ID=aman.adams;Password=Tholland<3;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30";
 
 
-        public int SelectUser(string email, string name, string password)
+        public int SelectUser(string email, string name)
         {
             int userId = -1; 
             using (SqlConnection con = new SqlConnection(con_string))

@@ -1,0 +1,194 @@
+﻿
+@*
+    ViewData["Title"] = "My Work";
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    // My Work page after logging in
+}
+<div class="text-center">
+    <h1 class="display-4" style="font-family:courier;">My Work</h1>
+
+    <style>
+        .image-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+            .image-container img {
+                margin-right: 10px;
+            }
+    </style>
+
+    <div class="row-padding, image-container" id="ceramics">
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/Kari_ceramic_bowls.jpeg" alt="Nesting bowls" width="350" height="200">
+            <h3 style="font-family:courier;">Nesting Bowl Set</h3>
+            <p style="font-family:courier;">Crockery</p>
+            <p style="font-family:courier;">R420</p>
+        </div>
+
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/b_saucer_mug.jpeg" alt="Blue Saucer & Mug" width="350" height="200">
+            <h3 style="font-family:courier;">Blue Mug & Saucer Set</h3>
+            <p style="font-family:courier;">Crockery</p>
+            <p style="font-family:courier;">R350</p>
+        </div>
+
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/spotted_mug.jpeg" alt="Spotted Mug" width="350" height="200">
+            <h3 style="font-family:courier;">Spotted Mugs</h3>
+            <p style="font-family:courier;">Crockery</p>
+            <p style="font-family:courier;">R150</p>
+        </div>
+
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/trinket_dish.jpeg" alt="Trinket Dish" width="350" height="200">
+            <h3 style="font-family:courier;">Trinket Dish</h3>
+            <p style="font-family:courier;">Home Accessories</p>
+            <p style="font-family:courier;">R260</p>
+        </div>
+    </div>
+
+
+    <div class="row-padding, image-container">
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/soap_dish.jpeg" alt="Soap Dish" width="350" height="200">
+            <h3 style="font-family:courier;">Soap Dish</h3>
+            <p style="font-family:courier;">Home Accessories</p>
+            <p style="font-family:courier;">R250</p>
+        </div>
+
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/casserole_dish.jpeg" alt="Casserole Dish" width="350" height="200">
+            <h3 style="font-family:courier;">Casserole Dish</h3>
+            <p style="font-family:courier;">Crockery</p>
+            <p style="font-family:courier;">R650</p>
+        </div>
+
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/weird_bowls.jpeg" alt="Unique Bowls" width="350" height="200">
+            <h3 style="font-family:courier;">Assymetrical Bowls</h3>
+            <p style="font-family:courier;">Crockery</p>
+            <p style="font-family:courier;">R350</p>
+        </div>
+
+        <div class="quarter">
+            <img src="~/PhotosForCloudDev/leaf_mug.jpeg" alt="Leaf Mug" width="350" height="200">
+            <h3 style="font-family:courier;">Garden Mugs</h3>
+            <p style="font-family:courier;">Crockery</p>
+            <p style="font-family:courier;">R140</p>
+        </div>
+    </div>
+
+    <body>
+        <div>
+            <form action="/Product/Home" method="post">
+                <h2>Place an Order</h2>
+                <label for="productName">Select Product:</label>
+                <select id="productName" name="productName">
+                    <option value="-----">------</option>
+                    <option value="Nesting Bowl Set">Nesting Bowl Set</option>
+                    <option value="Blue Mug & Saucer Set">Blue Mug & Saucer Set</option>
+                    <option value="Spotted Mugs">Spotted Mugs</option>
+                    <option value="Trinket Dish">Trinket Dish</option>
+                    <option value="Soap Dish">Soap Dish</option>
+                    <option value="Casserole Dish">Casserole Dish</option>
+                    <option value="Assymetrical Bowls">Assymetrical Bowls</option>
+                    <option value="Garden Mugs">Garden Mugs</option>
+
+                </select>
+                <br><br>
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+                <br><br>
+                <button type="submit">Place Order</button>
+
+            </form>
+
+
+        </div>
+
+
+
+        <form action="/Product/Work" method="post">
+            <h2>Insert new products</h2>
+            <input type="text" name="Name" placeholder="Name" required>
+            <input type="text" name="Price" placeholder="Price" required>
+            <input type="text" name="Category" placeholder="Category" required>
+            <input type="text" name="Availability" placeholder="Availability" required>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+            width: 1000%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: #ddd;
+                outline: none;
+            }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: cadetblue;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 80%;
+            opacity: 0.9;
+        }
+
+            button:hover {
+                opacity: 1;
+            }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: lightslategrey;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add padding to container elements */
+        .container {
+            padding: 16px;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+</div>
+

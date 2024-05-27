@@ -12,7 +12,7 @@ namespace CloudDevAssign.Controllers
         [HttpPost]
         public ActionResult Work(productTable Products)
         {
-            var result2 = prdttbl.insert_Product(Products);
+            var result2 = prdttbl.insert_product(Products);
             return RedirectToAction("Work", "Home");
         }
 
